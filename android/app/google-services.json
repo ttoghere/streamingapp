@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975925187201",
+    "project_id": "streamingapp-4b1a2",
+    "storage_bucket": "streamingapp-4b1a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975925187201:android:1b16a0346c64c5a444f380",
+        "android_client_info": {
+          "package_name": "site.tunckankilic.streamingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975925187201-hac39up8u9kje69pk97sc9see08j9l0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbsyRdq6hK2UCklQIOLVrZFgFpVhvQe9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975925187201-hac39up8u9kje69pk97sc9see08j9l0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
