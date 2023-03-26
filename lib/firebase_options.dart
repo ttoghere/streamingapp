@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,9 +43,19 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyD8gB8J7n0ddjO9A_EXX4YUSoAkiBIfpM0',
+    appId: '1:975925187201:web:a809504caad65e6244f380',
+    messagingSenderId: '975925187201',
+    projectId: 'streamingapp-4b1a2',
+    authDomain: 'streamingapp-4b1a2.firebaseapp.com',
+    storageBucket: 'streamingapp-4b1a2.appspot.com',
+    measurementId: 'G-MP9D8C6G25',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDbsyRdq6hK2UCklQIOLVrZFgFpVhvQe9U',
-    appId: '1:975925187201:android:1b16a0346c64c5a444f380',
+    appId: '1:975925187201:android:3ea31f3b442da70b44f380',
     messagingSenderId: '975925187201',
     projectId: 'streamingapp-4b1a2',
     storageBucket: 'streamingapp-4b1a2.appspot.com',
@@ -59,7 +63,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAq1Mmm1Hy2zFTpQXpCdVqSRHeHnmRG4-M',
-    appId: '1:975925187201:ios:5729cdba06d995bd44f380',
+    appId: '1:975925187201:ios:bd000ea0fb76fe0c44f380',
+    messagingSenderId: '975925187201',
+    projectId: 'streamingapp-4b1a2',
+    storageBucket: 'streamingapp-4b1a2.appspot.com',
+    iosClientId: '975925187201-oq9qt6g9j2n2kkhnuvc7h08ikqc0pmq0.apps.googleusercontent.com',
+    iosBundleId: 'site.tunckankilic.streamingapp',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAq1Mmm1Hy2zFTpQXpCdVqSRHeHnmRG4-M',
+    appId: '1:975925187201:ios:bd000ea0fb76fe0c44f380',
     messagingSenderId: '975925187201',
     projectId: 'streamingapp-4b1a2',
     storageBucket: 'streamingapp-4b1a2.appspot.com',

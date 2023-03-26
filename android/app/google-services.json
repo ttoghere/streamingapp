@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:975925187201:android:1b16a0346c64c5a444f380",
+        "mobilesdk_app_id": "1:975925187201:android:3ea31f3b442da70b44f380",
         "android_client_info": {
           "package_name": "site.tunckankilic.streamingapp"
         }
@@ -29,6 +29,13 @@
             {
               "client_id": "975925187201-hac39up8u9kje69pk97sc9see08j9l0l.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "975925187201-oq9qt6g9j2n2kkhnuvc7h08ikqc0pmq0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "site.tunckankilic.streamingapp"
+              }
             }
           ]
         }
