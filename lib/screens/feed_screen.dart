@@ -79,7 +79,7 @@ class _FeedScreenState extends State<FeedScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  height: size.height * 0.35,
+                                  height: size.height * 0.20,
                                   child: Image.network(
                                     post.image,
                                     fit: BoxFit.contain,
@@ -95,7 +95,7 @@ class _FeedScreenState extends State<FeedScreen> {
                                       post.username,
                                       style: const TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 20,
+                                        fontSize: 15,
                                       ),
                                     ),
                                     Text(
@@ -139,7 +139,7 @@ class _FeedScreenState extends State<FeedScreen> {
                             },
                             child: Container(
                               height: size.height * 0.1,
-                              margin: const EdgeInsets.symmetric(vertical: 10),
+                              margin: const EdgeInsets.symmetric(vertical: 5),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

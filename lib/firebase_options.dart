@@ -25,7 +25,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -67,17 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '975925187201',
     projectId: 'streamingapp-4b1a2',
     storageBucket: 'streamingapp-4b1a2.appspot.com',
-    iosClientId: '975925187201-oq9qt6g9j2n2kkhnuvc7h08ikqc0pmq0.apps.googleusercontent.com',
-    iosBundleId: 'site.tunckankilic.streamingapp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAq1Mmm1Hy2zFTpQXpCdVqSRHeHnmRG4-M',
-    appId: '1:975925187201:ios:bd000ea0fb76fe0c44f380',
-    messagingSenderId: '975925187201',
-    projectId: 'streamingapp-4b1a2',
-    storageBucket: 'streamingapp-4b1a2.appspot.com',
-    iosClientId: '975925187201-oq9qt6g9j2n2kkhnuvc7h08ikqc0pmq0.apps.googleusercontent.com',
+    iosClientId:
+        '975925187201-oq9qt6g9j2n2kkhnuvc7h08ikqc0pmq0.apps.googleusercontent.com',
     iosBundleId: 'site.tunckankilic.streamingapp',
   );
 }

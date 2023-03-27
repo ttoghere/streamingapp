@@ -58,13 +58,12 @@ class _BroadcastScreenState extends State<BroadcastScreen> {
     _joinChannel();
   }
 
-  String baseUrl = "https://twitch-tutorial-server.herokuapp.com";
+  String baseUrl = "https://streamer-tutorial-server.herokuapp.com/";
   String? token;
 
   Future<void> getToken() async {
-    var usersProvider = context.watch<UserProvider>().user;
     String url =
-        "$baseUrl/rtc/${widget.channelId}/publisher/userAccount/${usersProvider.uid}/";
+        "$baseUrl/rtc/${widget.channelId}/publisher/userAccount/${Provider.of<UserProvider>(context).user.uid}/";
     final res = await http.get(
       Uri.parse(url),
     );
@@ -105,15 +104,15 @@ class _BroadcastScreenState extends State<BroadcastScreen> {
   }
 
   void _joinChannel() async {
-    var usersProvider = Provider.of<UserProvider>(context, listen: false).user;
+    var usersProvider = Provider.of<UserProvider>(context).user;
     await getToken();
     if (token != null) {
       if (defaultTargetPlatform == TargetPlatform.android) {
         await [Permission.microphone, Permission.camera].request();
       }
       await _engine.joinChannelWithUserAccount(
-        testing123,
-        "testing123",
+        token,
+        widget.channelId,
         usersProvider.uid,
       );
     }

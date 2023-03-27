@@ -38,7 +38,7 @@ class AuthMethods {
           uid: cred.user!.uid,
         );
         await _userRef.doc(cred.user!.uid).set(user.toMap());
-        Provider.of<UserProvider>(context, listen: false).setUser(user);
+        Provider.of<UserProvider>(context,).setUser(user);
         res = true;
       }
     } on FirebaseAuthException catch (e) {
